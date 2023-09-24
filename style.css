@@ -1,0 +1,224 @@
+body {
+	 background-color: #E6E6FA;
+  font-family: Playfair Display;
+	 margin: 1rem auto;
+	 max-width: 80rem;
+}
+ h1 {
+	 text-align: center;
+	 margin-bottom: 1rem;
+   font-size: 8rem;
+   font-family: PLayfair Display;
+   font-weight: 100;
+}
+ section {
+	 display: flex;
+	 flex-direction: column;
+	 margin-bottom: 1rem;
+   padding: 1rem;
+}
+ @media screen and (min-width: 35rem) {
+	 section {
+		 flex-direction: row;
+	}
+}
+ section > * {
+	 flex: 1;
+}
+ article {
+	 padding: 1rem;
+}
+ article p {
+	 font-family: Futura;
+	 font-size: 1.1rem;
+	 line-height: 1.8;
+}
+ @media screen and (min-width: 35rem) {
+	 article p {
+		 margin: 0;
+	}
+}
+ @media screen and (min-width: 35rem) {
+	 article p:not(:last-of-type) {
+		 /*min-height: 90vh;*/
+	}
+}
+ figure {
+   padding: 1rem;
+  margin: 1rem;
+	 align-items: center;
+	 align-self: flex-start;
+	 display: flex;
+
+	 justify-content: center;
+	 top: 3rem;
+}
+ @media screen and (min-width: 35rem) {
+	 figure {
+		 position: sticky;
+	}
+}
+
+
+h2{
+  color:transparent;
+  font-family: 'Satisfy', cursive;
+  text-align: center;
+  font-size: 2rem;
+  background-image: linear-gradient(90deg, rgba(0,0,0,0), rgba(0,0,0,1));
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+	animation: gradient 10s ease infinite;
+}
+
+  @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/*https://codingartistweb.com/2020/01/gold-text-effect-css-text-effect/*/
+.gold{
+  letter-spacing: 5px;
+   background-image: linear-gradient(
+	to right,
+	#462523 0,
+  #cb9b51 22%, 
+	#f6e27a 45%,
+	#f6f2c0 50%,
+	#f6e27a 55%,
+	#cb9b51 78%,
+	#462523 100%
+	);
+  
+   color:transparent;
+   -webkit-background-clip:text;
+}
+
+.award {
+  text-align:center;
+  padding: 0px 50px;
+  margin: 0px 50px;
+  color: #f6e27a;
+  position: relative;
+  display: inline-block;
+}
+
+.publication {
+  text-align:center;
+ padding: 0px 50px;
+  margin: 0px 50px;
+  color: #aaaaea;
+  position: relative;
+  display: inline-block;
+}
+
+.grant {
+  text-align:center;
+ padding: 0px 50px;
+  margin: 0px 50px;
+  color: #e3e3e3;
+  position: relative;
+  display: inline-block;
+}
+
+/*https://www.w3schools.com/css/css_tooltip.asp*/
+ .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #9266CC;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 125px;
+  left: 110%;
+
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+/*https://www.w3schools.com/cssref/sel_hover.asp*/
+.award:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.publication:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.grant:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #9266CC transparent transparent;
+}
+
+/*Custom Cursor Images https://codepen.io/fmressel/pen/djwvJV Search for Unicode using https://emojipedia.org/ and replace characters before .png*/
+
+/*Rainbow*/
+.rainbow {
+  cursor: url(https://abs.twimg.com/emoji/v2/72x72/1f56f.png) 36 36, auto;
+}
+
+/*diamond*/
+.diamond {
+  cursor: url(https://abs.twimg.com/emoji/v2/72x72/1f48c.png) 36 36, auto;
+}
+
+/*light*/
+.light{
+  cursor: url(https://abs.twimg.com/emoji/v2/72x72/1f380.png) 36 36, auto;
+}
+
+/*sparkles*/
+.sparkles{
+  cursor: url(https://abs.twimg.com/emoji/v2/72x72/1fa84.png) 36 36, auto;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+a {
+  color: #dd22dd;
+}
+
+button {
+  background-color: #9349DC;; /* Violet */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
